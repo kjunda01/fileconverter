@@ -6,10 +6,9 @@ import { logger } from "./middlewares/logger";
 
 const app = express();
 
-// Aplicar middleware de log
 app.use(logger);
 
-// Usar as rotas da home no path raiz
+// Rotas
 app.use("/download", downloadRoutes);
 
 const PORT: number = parseInt(process.env.PORT || "3000", 10);

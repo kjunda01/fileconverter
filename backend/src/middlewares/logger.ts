@@ -1,8 +1,6 @@
-// logger.ts
 import { Request, Response, NextFunction } from "express";
 import chalk from "chalk";
 
-// Middleware de logging
 export const logger = (req: Request, res: Response, next: NextFunction) => {
   const now = new Date();
   const dia = String(now.getDate()).padStart(2, "0");
